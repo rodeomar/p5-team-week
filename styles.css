@@ -1,0 +1,25 @@
+body {
+    background: rgb(244, 243, 243);
+    font-family: monospace;
+}
+
+#header {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+#sub-header {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    margin: 3rem;
+}
