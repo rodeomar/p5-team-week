@@ -1,17 +1,22 @@
 // Define the sketch using instance mode
-let sketch = function (p) {
-
+const sketch = function (p) {
+  let x, y;
+  let xSpeed = 5;
+  let ySpeed = 5.5;
+  let xDirection = 1;
+  let yDirection = 1;
+  let d = 10;
+  let count = 0;
 
   p.setup = function () {
     p.createCanvas(700, 700); 
-  }; 
+    p.x = width/2;
+    p.y = height/2;
+    p.background(120);
+  }
 
   p.draw = function () {
-    p.background(255, 255, 255);
-    p.strokeWeight(5)
-    p.rect(200,200,200,200)
-    p.rect(500,300,200,200)
-    p.rect(500,600,200,200)
+    x = 
     
   };
 };
