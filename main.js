@@ -4,8 +4,8 @@ let sketch = function (p) {
   let cubeSize = 100;
 
   p.setup = function () {
-    p.createCanvas(700, 700, p.WEBGL);
-  };
+    p.createCanvas(700, 700, p.WEBGL); 
+  }; 
 
   p.draw = function () {
     p.background(200);
