@@ -11,6 +11,7 @@ let sketch = function (p) {
     p.strokeWeight(5)
     p.rect(200,200,200,200)
     p.rect(500,300,200,200)
+    p.rect(500,600,200,200)
     
   };
 };
