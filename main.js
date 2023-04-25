@@ -9,7 +9,7 @@ let sketch = function (p) {
 
   p.draw = function () {
     p.background(200);
-    p.noStroke();
+    p.noStroke(); 
     p.fill(255, 0, 0);
     p.push();
     p.translate(p.width / 2, p.height / 2, -cubeSize);
@@ -18,13 +18,13 @@ let sketch = function (p) {
     p.rotateZ(angle * 0.7);
     p.box(cubeSize);
     p.pop();
-    angle += 0.03;
+    angle += 0.03; 
   };
 };
 
 // Create a new p5 instance with the sketch and attach it to a container element
 let container = document.getElementById("sketch-container");
-let myP5 = new p5(sketch, container);
+let myP5 = new p5(sketch, container); 
 
 
 
@@ -36,6 +36,7 @@ let myP5 = new p5(sketch, container);
 // NEW SKETCH
 
 // Define a new sketch for a yellow floating 3D triangle
+
 // let sketch2 = function(p) {
 //   let angle = 0;
 //   let triangleSize = 100;
