@@ -1,9 +1,9 @@
-// Define the sketch using instance mode
 const sketch = function (p) {
 
   p.setup = function () {
     p.createCanvas(700, 700);
-    p.background(255,255,0);
+    p.background(0,0,0);
+    p.noStroke(); // Disable stroke for shapes
     
   }
 
@@ -11,19 +11,56 @@ const sketch = function (p) {
  
     let x = p.random(700)
     let y = p.random(700)
+    let colorX = p.map(x, 0, p.width, 0, 255);
+    let colorY = p.map(y, 0, p.height, 0, 255);
 
+    // Set random fill color
+    p.fill(p.random(255), p.random(255), p.random(255)); 
 
-
-    for (let i = 0; i < 100; i++) {
-        p.rect(x, y, 200, 200)
-    }
-
-
-   
+    // Draw random shape
+    p.beginShape();
+    p.vertex(x + p.random(-40, 20), y + p.random(-40, 20));
+    p.vertex(x + p.random(-40, 20), y + p.random(-40, 20));
+    p.vertex(x + p.random(-40, 20), y + p.random(-40, 20));
+    p.vertex(x + p.random(-40, 20), y + p.random(-40, 20));
+    p.endShape(p.CLOSE);
 
   };
 };
 
-// Create a new p5 instance with the sketch and attach it to a container element
 let container = document.getElementById("sketch-container");
-let myP5 = new p5(sketch, container); 
+let myP5 = new p5(sketch, container);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const sketch = function (p) {
+
+//   p.setup = function () {
+//     p.createCanvas(700, 700);
+//     p.background(0,0,0);
+//   }
+
+//   p.draw = function () {
+//     let x = p.random(800)
+//     let y = p.random(800)
+
+//     for (let i = 0; i < 100; i++) {
+//       p.fill(p.random(255), p.random(255), p.random(255)); // Set random fill color
+//       p.rect(x, y, 200, 200); // Draw rectangle
+//     }
+//   };
+// };
+
+// let container = document.getElementById("sketch-container");
+// let myP5 = new p5(sketch, container);
